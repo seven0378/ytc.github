@@ -4,9 +4,7 @@ $(function () {
 
 function Retrieve() {
     var dataArray = [];
-    //var script_url = 'https://script.google.com/macros/s/AKfycbzzXS5hX1Vt2_nChm8MfQrKlVgXwbUm6MU-ebiqNVaVrikGDpHPasB13w9jUKvF2LaU/exec';
-    //var URL= script_url + "?action=ytcout";
-    var URL = 'https://script.google.com/macros/s/AKfycbxSL0HatVuisgdqInJygvntz2EXfJHzEmyugLyP4y0WXr_MsSgdAIBe_E2OdZMyUPvk/exec';
+    var URL = 'https://script.google.com/macros/s/AKfycbx8Dq2u_ga5Hz6Mh08De0cGRXpSmJhiPW1vl5yjKA7SXDYFZ95MthHyCywtbHqO3wLC/exec';
     $.ajax({
         url: URL,
         type: 'POST',
