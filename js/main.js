@@ -5,7 +5,8 @@ $(function () {
 function Retrieve() {
     var dataArray = [];
     var script_url = 'https://script.google.com/macros/s/AKfycbxrryeM5iSl31VJGej49NI6NTwnL40ImEpXb7UNQdh6lvAG8wOjEALzEx60ROxvXHmz/exec';
-    var URL= script_url + "?action=ytcout";
+    //var URL= script_url + "?action=ytcout";
+    var URL = 'https://script.google.com/macros/s/AKfycbxrryeM5iSl31VJGej49NI6NTwnL40ImEpXb7UNQdh6lvAG8wOjEALzEx60ROxvXHmz/exec';
     $.ajax({
         url: URL,
         type: 'POST',
