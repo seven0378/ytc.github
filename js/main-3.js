@@ -4,9 +4,7 @@ $(function () {
 
 function Retrieve() {
     var dataArray = [];
-    var script_url = 'https://script.google.com/macros/s/AKfycbxrryeM5iSl31VJGej49NI6NTwnL40ImEpXb7UNQdh6lvAG8wOjEALzEx60ROxvXHmz/exec';
-    var URL= script_url + "?action=ytcout";
-    //var URL = 'https://script.google.com/macros/s/AKfycbxrryeM5iSl31VJGej49NI6NTwnL40ImEpXb7UNQdh6lvAG8wOjEALzEx60ROxvXHmz/exec';
+    var URL = 'https://script.google.com/macros/s/AKfycbzAxqZONtX4uOh4IlD2PEaJtvmWZPijE7o-BlNn7RG7_yQlfeOxkSx3k6uVbWSAJRJS/exec';
     $.ajax({
         url: URL,
         type: 'POST',
@@ -17,7 +15,6 @@ function Retrieve() {
         success: function (Jdata) {
             var Info = Jdata.data;
             for (i = 0; Info.length > i; i++) {
-                pdoName = Info[i].pdoName;
                 pdate = Info[i].pdate;
                 pcode = Info[i].pcode;
                 pname = Info[i].pname;
@@ -33,7 +30,6 @@ function Retrieve() {
             function print() {
                 $("#table-data").append(
                     '<tr>' +
-                    '<td class="w-5">' + pdoName + '</td>' +
                     '<td class="w-8">' + pdate + '</td>' +
                     '<td class="w-10">' + pcode + '</td>' +
                     '<td class="w-20">' + pname + '</td>' +
@@ -52,9 +48,8 @@ function Retrieve() {
             function select() {
                 var result = "";
                 $("#select").each(function () {
-                    var result = $(this).val();
-                    //search_table($(this).val());
-                    search_table2($(this).val(),0);
+                    result = $(this).val();
+                    search_table($(this).val());
                 });
             };
 
@@ -74,22 +69,6 @@ function Retrieve() {
                     }
                 });
             }
-
-            function search_table2(value, columnIndex) {
-                $('tbody tr').each(function () {
-                  var found = 'false';
-                  var columnValue = $(this).find('td').eq(columnIndex).text();
-                  if (columnValue.toLowerCase().indexOf(value.toLowerCase()) >= 0) {
-                    found = 'true';
-                  }
-                  if (found == 'true') {
-                    $(this).show();
-                  } else {
-                    $(this).hide();
-                  }
-                });
-              }
-            
         }
     });
 };
