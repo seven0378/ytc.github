@@ -1,58 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>勇達 外包查詢系統</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <title>網頁預約系統</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-
 <body>
-    <div id="wrap">
-        <div class="container-fluid padding-tb">
-            <div class="row">
-                <div class="col-8">
-                    <h1>YTC外包</h1>
-                </div>
-                <div class="col-4">
-                    <a href="Google表單網址" class="btn btn-danger float-right" target="_blank">暫無功能</a>
-                </div>
-                <div class="col-12 mb-3">
-                    <div class="group">
-                        <label>廠商搜尋</label>
-                        <select id="select">
-                            <option value="" checked>All</option>
-                            <option value="協煌">協煌</option>
-                            <option value="柏昇">柏昇</option>
-                            <option value="百辰">百辰</option>
-                            <option value="協煌">協煌</option>
-                            <option value="力豪">力豪</option>
-                            <option value="協奕">協奕</option>
-                            <option value="宏元">宏元</option>
-                            <option value="久品">久品</option>
-                            <option value="車工品">車工品</option>
-                            <option value="車床部">車床部</option>
-                            <option value="車床部">鑽中孔</option>
-                            <option value="鉆孔部">鉆孔部</option>
-                            <option value="固于">固于</option>
-                            <option value="昶榮">昶榮</option>
-                            <option value="駿宏">駿宏</option>
-                            <option value="岳晃">岳晃</option>
-                            <option value="源鋒">源鋒</option>
-                            <option value="敬業">敬業</option>
-                            <option value="順發">順發</option>
-                            <option value="協奕">協奕</option>
-                            <option value="宏元">宏元</option>
-                            <option value="龍昌">龍昌</option>
-
-                        </select>
-                        <input type="submit" id="doaction" class="btn btn-primary ml-3" value="查詢">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-8 mx-auto">
+                <h1 class="mb-5 text-center">美髮店-預約系統</h1>
+                <form action="post" id="google-sheet">
+                    <div class="mb-3">
                     </div>
-                </div>
+                    <div class="col-12 mb-3">
+                        <div class="group">
+                            <label>廠商搜尋</label>
+                            <select id="select">
+                                <option value="" checked>All</option>
+                                <option value="協煌">協煌</option>
+                                <option value="柏昇">柏昇</option>
+                                <option value="百辰">百辰</option>
+                                <option value="協煌">協煌</option>
+                                <option value="力豪">力豪</option>
+                                <option value="協奕">協奕</option>
+                                <option value="宏元">宏元</option>
+                                <option value="久品">久品</option>
+                                <option value="車工品">車工品</option>
+                                <option value="車床部">車床部</option>
+                                <option value="車床部">鑽中孔</option>
+                                <option value="鉆孔部">鉆孔部</option>
+                                <option value="固于">固于</option>
+                                <option value="昶榮">昶榮</option>
+                                <option value="駿宏">駿宏</option>
+                                <option value="岳晃">岳晃</option>
+                                <option value="源鋒">源鋒</option>
+                                <option value="敬業">敬業</option>
+                                <option value="順發">順發</option>
+                                <option value="協奕">協奕</option>
+                                <option value="宏元">宏元</option>
+                                <option value="龍昌">龍昌</option>
+    
+                            </select>
+                            <input type="submit" id="doaction" class="btn btn-primary  ml-3" value="查詢" />
+                        </div>
+                    </div>
+                </form>
+
                 <div class="col-12">
                     <div class="table-responsive-md">
                         <table class="table table-hover mb-0">
@@ -73,12 +69,16 @@
                         </table>
                     </div>
                 </div>
+
+
+
+
+
+
             </div>
         </div>
     </div>
-    <!-- js -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'></script>
     <script src="js/main.js"></script>
 </body>
-
 </html>
